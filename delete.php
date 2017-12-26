@@ -7,9 +7,9 @@ $$        $$    $$  $$  $$  $$   $$$$     $$
 $$      $$$$$$  $$  $$   $$$$     $$    $$$$$$
 
 Разработчик и дизайнер Сысолятин Артём
-http://sysolyatin.com http://pingvi.org
-https://github.com/temapingvi
-E-mail: me@pingvi.org
+http://yudenis.ucoz.ru
+https://github.com/yudenisov
+E-mail: yudenisov@mail.ru
 
 Перед использованием, читайте файл лицензии.
 **/

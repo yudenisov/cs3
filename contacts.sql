@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.5
--- http://www.phpmyadmin.net
+-- version 4.6.2
+-- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Июн 08 2014 г., 20:29
--- Версия сервера: 5.6.13-log
--- Версия PHP: 5.4.17
+-- Хост: localhost
+-- Время создания: Апр 19 2017 г., 11:12
+-- Версия сервера: 5.7.12-log
+-- Версия PHP: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- База данных: `pi125`
@@ -26,10 +26,27 @@ SET time_zone = "+00:00";
 -- Структура таблицы `contacts`
 --
 
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `name` text NOT NULL,
-  `tel` text NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `mobtel` text NOT NULL,
   `email` text NOT NULL,
+  `hometel` text NOT NULL,
+  `mailru` text NOT NULL,
+  `gmail` text NOT NULL,
+  `microsoft` text NOT NULL,
+  `yahoo` text NOT NULL,
+  `skype` text NOT NULL,
+  `icq` text NOT NULL,
+  `fb` text NOT NULL,
+  `gplus` text NOT NULL,
+  `ok` text NOT NULL,
+  `vk` text NOT NULL,
+  `twitter` text NOT NULL,
+  `youtube` text NOT NULL,
+  `instagram` text NOT NULL,
+  `lj` text NOT NULL,
   `org` text NOT NULL,
   `url` text NOT NULL,
   `local` text NOT NULL,
@@ -37,18 +54,20 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
+--
+-- Очистить таблицу перед добавлением данных `contacts`
+--
+
+TRUNCATE TABLE `contacts`;
 --
 -- Дамп данных таблицы `contacts`
 --
 
-INSERT INTO `contacts` (`name`, `tel`, `email`, `org`, `url`, `local`, `note`, `id`) VALUES
-('Пушкин Александр Сергеевич', '+7-111-222-22-22', 'alex@pushkin.com', '', 'http://pushkin.com', 'Минеральные воды, Кавказ', 'Поэт', 1),
-('Сысолятин Артём Александрович', '', 'me@pingvi.org', 'RusFrag', 'http://pingvi.org', 'СПб', 'Web-разработчик', 2),
-('Иванов Иван Петрович', '55-55-55', 'ivanov@gmail.com', 'Ростелеком', 'http://ivanov.com', 'Москва', 'Программист', 3),
-('Петров Иван Иванович', '+7-555-333-22-11', 'petrov@gmail.com', 'СПбГУ', 'http://petrov.com', 'СПб', 'Препод в универе', 4),
-('Сергеев Юрий васильевич', '+1-589-789-45-69', 'sergeev@gmail.com', '', '', 'США', 'Вместе учились', 5);
+INSERT INTO `contacts` (`name`, `birthday`, `mobtel`, `email`, `hometel`, `mailru`, `gmail`, `microsoft`, `yahoo`, `skype`, `icq`, `fb`, `gplus`, `ok`, `vk`, `twitter`, `youtube`, `instagram`, `lj`, `org`, `url`, `local`, `note`, `id`) VALUES
+('Сысолятин Артём Александрович', '1900-01-01', '', 'me@pingvi.org', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'RusFrag', 'http://pingvi.org', 'Санкт-Петербург', 'Веб-разработчик', 1),
+('Денисов Юрий Александрович', '1969-05-31', '+79047071125', 'yudenisov@yandex.ru', '20-74-77', 'yudenisov@mail.ru', 'yudenisov@gmail.com', 'yudenisov@hotmail.com', 'yudenisov1969@yahoo.com', 'yudenisov1969', '120105414', 'yudenisov', '', '', '', '@yudenisov', '', '@yudenisov', 'yudenisov', 'Freelance', 'http://yudenis.ucoz.ru/', 'ул. Мичурина И.В., 19/27, Саратов, Россия, 410056', 'Веб-разработчик', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
